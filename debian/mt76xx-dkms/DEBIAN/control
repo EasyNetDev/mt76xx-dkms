@@ -1,0 +1,12 @@
+Package: mt76xx-dkms
+Version: 1.0.0
+Architecture: all
+Maintainer: EasyNetDev <devel@easynet.dev>
+Installed-Size: 26455
+Depends: dkms, linux-libc-dev, libc6-dev
+Section: admin
+Priority: optional
+Homepage: https://github.com/EasyNetDev/mt76xx-dkms
+Description: Mediatek USB Wireless drivers for kernels which doesn't have it
+ Mediatek Wireless MT76XX for kernels that doesn't have this driver.
+ Example Odroid XU4.

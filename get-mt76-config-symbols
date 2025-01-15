@@ -1,0 +1,19 @@
+#!/bin/bash
+
+DRIVER="mt76"
+
+KERNEL_66="6.4 6.5 6.6"
+KERNEL_67=""
+
+for KVER in `ls -1 $DRIVER | grep "^[0-9]\+\.[0-9]\+" | sort -V`;
+do
+    if [[ -n "${KERNEL_66}" ]]; then
+	if $(echo $KERNEL_66 | grep -q "6.7") then
+	    
+	fi
+    fi
+    echo "Kernel $KVER:"
+    for SYMBOL in `find ./$DRIVER/$KVER/ -name Kconfig`; do
+	grep "^config" $SYMBOL | sed -e "s/config /CONFIG_/g"
+    done
+done

@@ -1,0 +1,55 @@
+export DRIVER_NAME := mt76
+export DRIVER_INFO := drivers/net/wireless/$(DRIVER_NAME)
+
+# Define SYMBOLS / MACROS for which modules to build
+# MT76
+MODULE := CONFIG_WLAN_VENDOR_MEDIATEK=y
+
+# MT7925 doesn't exist prior to 6.7
+
+MODULES_COMMON := CONFIG_MT76_CORE=m \
+		CONFIG_MT76_LEDS=y \
+		CONFIG_MT76_USB=m \
+		CONFIG_MT76x02_LIB=m \
+		CONFIG_MT76x02_USB=m \
+		CONFIG_MT76_CONNAC_LIB=m \
+		CONFIG_MT76x0_COMMON=m \
+		CONFIG_MT76x2_COMMON=m \
+		CONFIG_MT7615_COMMON=m \
+		CONFIG_MT7921_COMMON=m \
+		CONFIG_MT792x_LIB=m \
+		CONFIG_MT792x_USB=m \
+		CONFIG_MT7925_COMMON=n
+
+MODULES_USB := CONFIG_MT7601U=m \
+		CONFIG_MT76x0U=m \
+		CONFIG_MT76x2U=m \
+		CONFIG_MT7663U=m \
+		CONFIG_MT7921U=m \
+		CONFIG_MT7925U=n
+
+MODULES_PCI := CONFIG_MT7603E=n \
+		CONFIG_MT7615E=n \
+		CONFIG_MT76x0E=n \
+		CONFIG_MT76x2E=n \
+		CONFIG_MT7915E=n \
+		CONFIG_MT7921E=n \
+		CONFIG_MT7925E=n \
+		CONFIG_MT7996E=n
+
+MODULES_SDIO := CONFIG_MT7663_USB_SDIO_COMMON=m \
+		CONFIG_MT7921S=n \
+		CONFIG_MT7663S=n
+
+MODULES_WMAC := MT798X_WMAC=n
+
+MODULE_NO_BUILD := CONFIG_PCI=n
+
+MODULES_INSTALL := mt76.ko mt76-usb.ko mt76-connac-lib.ko \
+	mt76x02-lib.ko mt76x02-usb.ko \
+	mt792x-lib.ko mt792x-usb.ko \
+	mt7615/mt7615-common.ko mt7615/mt7663u.ko \
+	mt76x0/mt76x0u.ko \
+	mt76x2/mt76x2-common.ko mt76x2/mt76x2u.ko \
+	mt7921/mt7921-common.ko mt7921/mt7921u.ko \
+	mt7925/mt7925-common.ko mt7925/mt7925u.ko

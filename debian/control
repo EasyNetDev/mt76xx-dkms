@@ -1,0 +1,27 @@
+Source: mt76xx-dkms
+Section: admin
+Priority: optional
+Maintainer: EasyNetDev <devel@easynet.dev>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.9.1
+Homepage: https://github.com/EasyNetDev/mt76xx-dkms
+Vcs-Browser: https://github.com/EasyNetDev/mt76xx-dkms
+Vcs-Git: https://github.com/EasyNetDev/mt76xx-dkms.git
+
+Package: mt76xx-6.6-dkms
+Architecture: all
+Depends: ${misc:Depends}, dkms, linux-libc-dev, libc6-dev
+XB-Modaliases: ${modaliases}
+Description:  Mediatek USB Wireless drivers for kernels up to 6.6 which doesn't have it
+ Mediatek Wireless MT76XX for kernels that doesn't have this driver.
+ Example Odroid XU4.
+ For Kernels up to 6.6
+
+Package: mt76xx-6.7-dkms
+Architecture: all
+Depends: ${misc:Depends}, dkms, linux-libc-dev, libc6-dev
+XB-Modaliases: ${modaliases}
+Description:  Mediatek USB Wireless drivers for kernels from 6.7 which doesn't have it
+ Mediatek Wireless MT76XX for kernels that doesn't have this driver.
+ Example Odroid XU4.
+ Only for kernels from 6.7 and newer.

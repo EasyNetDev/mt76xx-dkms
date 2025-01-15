@@ -1,0 +1,6 @@
+#!/usr/bin/dh-exec --with=install
+README.md			usr/src/#PKG_NAME#-#VERSION#/
+LICENSE				usr/src/#PKG_NAME#-#VERSION#/
+Makefile			usr/src/#PKG_NAME#-#VERSION#/
+debian/dkms-nopci.conf	=>	usr/src/#PKG_NAME#-#VERSION#/dkms.conf
+mt76/				usr/src/#PKG_NAME#-#VERSION#/

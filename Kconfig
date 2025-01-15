@@ -1,0 +1,36 @@
+config MT7603E
+	tristate "MediaTek MT7603E (PCIe) and MT76x8 WLAN support"
+	default n
+
+config MT7615E
+	tristate "MediaTek MT7615E and MT7663E (PCIe) support"
+	default n
+
+config MT76x2E
+	tristate "MediaTek MT76x2E (PCIe) support"
+	default n
+
+config MT76x0E
+	tristate "MediaTek MT76x0E (PCIe) support"
+	default n
+
+config MT7921E
+	tristate "MediaTek MT7921E (PCIe) support"
+	default n
+
+config MT7915E
+	tristate "MediaTek MT7915E (PCIe) support"
+	default n
+
+config MT7921S
+	tristate "MediaTek MT7921S (SDIO) support"
+	default n
+
+config MT7925E
+	tristate "MediaTek MT7925E (PCIe) support"
+	default n
+
+config MT7996E
+	tristate "MediaTek MT7996 (PCIe) support"
+	default n
+

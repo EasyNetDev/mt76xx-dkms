@@ -1,0 +1,27 @@
+# Autodetection if we have a driver for the specific MAJOR.MINOR version of kernel
+# In case the directory MAJOR.MINOR is missing, we stop compilation with an error
+
+#$(info Makefile: Include Config.mk)
+#include $(PWD)/Config.mk
+
+$(info mt76/Kbuild: CONFIG_WLAN_VENDOR_MEDIATEK=$(CONFIG_WLAN_VENDOR_MEDIATEK))
+$(info mt76/Kbuild: CONFIG_MT76x0E=$(CONFIG_MT76x0E))
+
+ifeq ($(KVER_MAJ_MIN),)
+$(error KVER_MAJ_MIN not defined. Maybe there is an error in Kbuild/Makefile)
+endif
+
+# Just for debugging
+#$(info DIR="$(M)/$(DRIVER_NAME)/$(KVER_DIR)")
+
+KVER_DIR = $(wildcard $(M)/$(DRIVER_NAME)/$(KVER_MAJ_MIN)/Makefile)
+
+$(info KVER_DIR="$(KVER_DIR)")
+
+ifeq ($(KVER_DIR),)
+$(error Couldn't find driver sources for Linux Kernel $(KVER_MAJ_MIN).X. Just copy from latest Linux kernel sources version linux-$(KVER_MAJ_MIN).X/drivers/net/wireless/mt76 directory under drivers/$(KVER_MAJ_MIN)/ and try again.)
+else
+$(info Found driver sources for Linux Kernel $(KVER_MAJ_MIN).x)
+endif
+
+obj-y                   := $(KVER_MAJ_MIN)/

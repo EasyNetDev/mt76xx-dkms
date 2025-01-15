@@ -1,0 +1,6 @@
+README.md		usr/src/mt76xx-1.0.0/
+LICENSE			usr/src/mt76xx-1.0.0/
+Config.mk		usr/src/mt76xx-1.0.0/
+Makefile		usr/src/mt76xx-1.0.0/
+debian/dkms.conf	usr/src/mt76xx-1.0.0/
+mt76/			usr/src/mt76xx-1.0.0/

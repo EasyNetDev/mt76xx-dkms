@@ -1,0 +1,6 @@
+./README.md
+./LICENSE
+./Config.mk
+./Makefile
+./debian/dkms.conf
+./mt76/

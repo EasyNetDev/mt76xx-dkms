@@ -1,0 +1,13 @@
+mt76xx-dkms (1.0.0) unstable; urgency=medium
+
+  * Add Linux Kernel 6.12 driver
+  * Add Linux Kernel 6.11 driver
+  * Add Linux Kernel 6.10 driver
+  * Add Linux Kernel 6.9 driver
+  * Add Linux Kernel 6.8 driver
+  * Add Linux Kernel 6.7 driver
+  * Add Linux Kernel 6.6 driver
+  * Add Linux Kernel 6.5 driver
+  * Add Linux Kernel 6.4 driver
+
+ -- EasyNetDev <devel@easynet.dev>  Sat, 28 Dec 2024 17:57:02 +0300
